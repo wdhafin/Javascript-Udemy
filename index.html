@@ -10,6 +10,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/styles/app.css" />
+
+    <!-- DEFER AND ASYNC JUST FOR EXTENAL FILE NOT FOR INTERNAL SCRIPT -->
+
+    <!-- Download now but execute after HTML has parsed (ordered -> execute from top to bottom) -->
+    <script src="./assets/scripts/vendor.js" defer></script>
+    <script src="./assets/scripts/app.js" defer></script>
+
+    <!-- Download now and execute now (unordered -> app.js can earlier execute before vendor.js) -->
+    <!-- <script src="./assets/scripts/vendor.js" async></script>
+    <script src="./assets/scripts/app.js" async></script> -->
   </head>
   <body>
     <header>
@@ -30,6 +40,4 @@
       <h2>Result: <span id="current-result">0</span></h2>
     </section>
   </body>
-  <script src="./assets/scripts/vendor.js"></script>
-  <script src="./assets/scripts/app.js"></script>
 </html>
